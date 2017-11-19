@@ -1,6 +1,6 @@
 
 var Parser = require('binary-parser').Parser;
-var StringOptions = {length: 99, zeroTerminated:true};
+var StringOptions = {length: 999, zeroTerminated:true};
 
 module.exports = PacketModels = {
 
@@ -25,11 +25,10 @@ module.exports = PacketModels = {
         .int16le("target_y", StringOptions)
         .int16le("angle", StringOptions),
 
-
     damage: new Parser().skip(1)
         .string("command", StringOptions)
         .string("inst", StringOptions)
-        .int16le("dmg", StringOptions)
+        .int16le("dmg", StringOptions),
 		
 	combo: new Parser().skip(1)
         .string("command", StringOptions)
