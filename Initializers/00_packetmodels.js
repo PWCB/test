@@ -1,6 +1,6 @@
 
 var Parser = require('binary-parser').Parser;
-var StringOptions = {length: 999, zeroTerminated:true};
+var StringOptions = {length: 9999, zeroTerminated:true};
 
 module.exports = PacketModels = {
 
