@@ -30,7 +30,7 @@ module.exports = PacketModels = {
         .string("inst", StringOptions)
         .int16le("dmg", StringOptions),
 		
-	combo: new Parser().skip(1)
+    combo: new Parser().skip(1)
         .string("command", StringOptions)
         .string("combostr", StringOptions)
 }
